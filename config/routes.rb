@@ -1,6 +1,7 @@
 Rails3BootstrapDeviseCancan::Application.routes.draw do
   root :to => "home#index"
-  devise_for :users
+    match '/terms_use', :to => "home#terms_use"
+  devise_for :users, :controllers => {:sessions => "sessions", :registrations => "registrations"}
   resources :users
   
 end

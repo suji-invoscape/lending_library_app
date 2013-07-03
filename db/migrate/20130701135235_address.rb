@@ -1,5 +1,9 @@
 class Address < ActiveRecord::Migration
-  def change
-    add_column :users, :address, :string
+  def up
+    change_column :users, :address, :text
+  end
+
+  def down
+    change_column :users, :address, :string
   end
 end

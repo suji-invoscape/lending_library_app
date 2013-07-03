@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(:version => 20130701135235) do
     t.datetime "updated_at",                             :null => false
     t.string   "name"
     t.string   "mobile"
-    t.string   "address"
+    t.text     "address"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

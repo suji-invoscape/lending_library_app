@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-default :from => "no-reply@invoscape.com"
+default :from => "EasyRead Library"
  
 
  def registration_confirmation(user)
