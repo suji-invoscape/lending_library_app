@@ -1,0 +1,12 @@
+<h1>Edit Book </h1>
+<%= form_tag :action => 'update', :id => @book do %>
+<p><label for="book_name">Name</label>
+<%= text_field 'book', 'name' %></p>
+<p><label for="book_author">Author</label>
+<%= text_field 'book', 'author' %></p>
+<p><label for="book_publisher">Publisher</label>
+<%= text_field 'book', 'publisher' %></p>
+<p><label for="book_stack">Stack</label>	
+<%= select_tag "stack", "<option>1</option><option>2</option><option>3</option><option>4</option>".html_safe %></p>
+<%= submit_tag "Save changes" %>
+<% end %>

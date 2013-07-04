@@ -15,9 +15,12 @@ class ApplicationController < ActionController::Base
     user_path(resource_or_scope)
   end
 
-  def set_dd_flash_message
-  	flash.now[:notice] = "You need to pay 1000 deposit amount - Click <a href='#{terms_use_path}'>here</a> for details!".html_safe
 
+
+  def set_dd_flash_message
+    if not current_user.admin?
+      flash.now[:notice] = "You need to pay 1000 deposit amount - Click <a href='#{terms_use_path}'>here</a> for details!".html_safe
+end
   end
 
 end

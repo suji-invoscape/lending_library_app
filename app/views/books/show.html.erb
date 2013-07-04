@@ -1,0 +1,6 @@
+<h1><%= @book.book_name %></h1>
+<p><strong>Author: </strong><%= @book.author %><br />
+<strong>Publisher :</strong> <%= @book.publisher %><br />
+<strong>Stack:</strong> <%= @book.stack %><br />
+</p>
+<%= link_to 'Back', {:action => 'new'} %>
