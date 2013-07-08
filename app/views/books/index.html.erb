@@ -1,0 +1,17 @@
+<h1>Book Lists</h1>
+
+<ul class="users">
+  <% @books.each do |book| %>
+    <li>
+
+      <td><%= link_to book.book_name, book %></td>
+
+    </li>
+  <% end %>
+</ul>
+
+<% if current_user.admin? %>
+<strong><%=  link_to 'Add book', {:action => 'new'}, :class => 'top'%></strong>
+<% end %>
+
+<%= render "devise/shared/notice" %>

@@ -1,5 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
-    skip_before_filter :set_dd_flash_message, :except => [:edit]
+    
 
     def update
     self.resource = resource_class.to_adapter.get!(send(:"current_#{resource_name}").to_key)

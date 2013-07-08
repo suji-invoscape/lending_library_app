@@ -19,5 +19,14 @@
     <%= link_to 'Sign up', new_user_registration_path %>
     </li>
   <% end %>
-
+   <% if user_signed_in? %>
+    <li>
+    <%= link_to 'Books',  books_path %>
+    </li> 
+  <% end %>
+  <%  if current_user && current_user.admin? %>
+  <li>
+    <%= link_to 'users', users_path %>
+  </li>
+  <% end %>
 </ul>
