@@ -10,4 +10,4 @@ class MarkAsPaidController < ApplicationController
     
 	end
 
-
+end
