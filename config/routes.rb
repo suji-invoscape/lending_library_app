@@ -7,4 +7,5 @@ Rails3BootstrapDeviseCancan::Application.routes.draw do
   devise_for :users, :controllers => {:sessions => "sessions", :registrations => "registrations"}
   resources :users
   resources :books
+  resources :mark_as_paids
 end

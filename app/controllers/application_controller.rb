@@ -15,7 +15,5 @@ class ApplicationController < ActionController::Base
     user_path(resource_or_scope)
   end
 
-  def access_permission_for_adding_book
-       end
   
 end

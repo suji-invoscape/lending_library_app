@@ -2,18 +2,28 @@
 <h1>User Lists</h1>
 
 <ul class="books ">
-  <table>
+  <table class='table'>
+    <tr>
+      <th>Name</th>
+      
+      <th>Email</th>
+      
+
+      <th>Action</th>
+      
+    </tr>
+    <%= form_tag :action => 'new' do %>  
   <% @users.each do |user| %>
     <tr>
       <td><%= link_to user.name %></td>
       <td><%= link_to user.email %></td>
-      
-
+    <td><%= submit_tag "mark as paid" %></td>
 
     </tr>
   <% end %>
 </ul>
 </table>
+<%end%> 
 
 
 

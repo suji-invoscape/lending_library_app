@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-	skip_before_filter :access_permission_for_adding_book, only:[:new]
+	
    
    def index
       @books = Book.all
