@@ -1,6 +1,6 @@
 
 <h1>User Lists</h1>
-
+  
 <ul class="books ">
   <table class='table'>
     <tr>
@@ -12,18 +12,27 @@
       <th>Action</th>
       
     </tr>
-    <%= form_tag :action => 'new' do %>  
+  
   <% @users.each do |user| %>
     <tr>
       <td><%= link_to user.name %></td>
       <td><%= link_to user.email %></td>
-    <td><%= submit_tag "mark as paid" %></td>
+    <td><% if user.paid == true %>
+      paid
+      <%else%>
+     
+      <%= link_to "mark as paid", mark_as_paids_path(:id => 
+    user.id) %><%end%></td>
+
 
     </tr>
+ 
   <% end %>
+
+
 </ul>
 </table>
-<%end%> 
+
 
 
 

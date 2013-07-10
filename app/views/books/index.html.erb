@@ -2,10 +2,9 @@
 
 <ul class="users">
   <% @books.each do |book| %>
-    <li>
+    <li >
 
-      <td><%= link_to book.book_name, book %></td>
-
+      <td><%= link_to book.book_name, book %>
     </li>
   <% end %>
 </ul>

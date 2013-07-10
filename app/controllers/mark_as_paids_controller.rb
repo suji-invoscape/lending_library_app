@@ -1,13 +1,12 @@
-class MarkAsPaidController < ApplicationController
+class MarkAsPaidsController < ApplicationController
 
-	def new
-		if @user.paid?
+	def index
 
- redirect_to new_mark_as_paid
-      else
-        render :action => 'new'
+		 @user = User.find(params[:id])
+		 @user.paid = true 
+		 if @user.save
+        redirect_to users_path 																		
       end
-    
-	end
+  end
 
 end
