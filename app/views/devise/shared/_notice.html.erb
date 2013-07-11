@@ -1,5 +1,10 @@
 <% if not current_user && current_user.admin? %>
     <div class="class">  
-     <strong><%= "You need to pay 1000 deposit amount - Click <a href='#{terms_use_path}'>here</a> for details!".html_safe %></strong>
+ <% if current_user.paid == false || current_user.paid.nil? %>		
+
+     <strong><%= "You need to pay 1000 deposit amount - Click <a href='#{terms_use_path}'>here</a> for details!".html_safe %></strong>		
+  	<% end %>	
+
   </div>
 <%end %>
+		

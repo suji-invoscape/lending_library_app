@@ -1,16 +1,27 @@
 <h1>Book Lists</h1>
 
 <ul class="users">
+	
+	<table class='table'>
+<%if not current_user.admin?%>
+      <th>Book Name</th>
+      <th> </th>
+      <th>Order</th>
+      <% end %>
   <% @books.each do |book| %>
-    <li >
-
-      <td><%= link_to book.book_name, book %>
-    </li>
+   
+<tr>
+      <td><%= link_to book.book_name, book %></td>
+  
+  <th>
+      <td><%= link_to 'Lend book' if not current_user.admin?%></td>
+  </th>
+    </tr>
   <% end %>
 </ul>
 
 <% if current_user.admin? %>
 <strong><%=  link_to 'Add book', {:action => 'new'}, :class => 'top'%></strong>
 <% end %>
-
 <%= render "devise/shared/notice" %>
+	</table>

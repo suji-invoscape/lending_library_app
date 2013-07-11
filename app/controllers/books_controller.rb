@@ -37,4 +37,8 @@ class BooksController < ApplicationController
    def delete
 
    end	
+    def lend
+ 
+    end
+
 end
